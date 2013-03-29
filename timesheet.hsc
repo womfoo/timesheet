@@ -131,7 +131,7 @@ peekEvents ptr = go 0 ptr
            do let nextoffset = fromIntegral (length_ e)
               es <- go nextoffset ptr'
               return (e:es)
-         else return []
+           else return []
 
 toRow :: [LocalTime] -> [String]
 toRow xs = [show (localDay dmin), timestring dmin, timestring dmax, daystring]
